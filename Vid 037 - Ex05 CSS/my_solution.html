@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My exercise 5 solution</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		header{
+			position: sticky;
+			top: 0px;
+			z-index: 1;
+		}
+
+		nav {
+			height: 60px;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			background-color: violet;
+			border: 2px solid black;
+		}
+
+		.boxes {
+			display: flex;
+			position: relative;
+			top: 20px;
+			left: 50px;
+			width: 900px;
+			height: 700px;
+			border: 2px solid black;
+			background-color: lightgreen;
+		}
+
+		.square1 {
+			background-color: pink;
+			position: relative;
+			top: 175px;
+			left: 75px;
+			width: 350px;
+			height: 350px;
+			border: 2px solid black;
+		}
+
+		.square2 {
+			background-color: lightblue;
+			position: relative;
+			top: 175px;
+			left: 125px;
+			width: 350px;
+			height: 350px;
+			border: 2px solid black;
+		}
+
+		.circle {
+			z-index: 1;
+			background-color: orange;
+			position: fixed;
+			width: 50px;
+			height: 50px;
+			bottom: 0px;
+			left: 955px;
+			border-radius: 100%;
+			border: 2px solid black;
+		}
+
+		.oval {
+			text-align: center;
+			font-size: 30px;
+			position: relative;
+			top: 50px;
+			left: 250px;
+			width: 500px;
+			height: 100px;
+			padding-top: 30px;
+			border: 2px solid black;
+			border-radius: 30px;
+		}
+
+		footer{
+			background-color: gray;
+			position: relative;
+			top: 80px;
+			width: 100%;
+			height: 60px;
+			border: 2px solid black;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav></nav>
+	</header>
+
+	<main>
+
+		<div class="boxes">
+			<div class="square1"></div>
+			<div class="square2"></div>
+		</div>
+
+		<div class="circle"></div>
+
+		<div class="oval">Welcome to this Sigma Web Development Course</div>
+
+	</main>
+
+	<footer></footer>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grid1</title>
+	<style>
+		.container {
+			border: 2px solid black;
+			display: grid;
+			/* grid-template-columns: [phla] 120px [dusra] 100px [t]; */
+			/* this way we can also put name of the rows or columns */
+			grid-template-rows: 100px 100px 100px;
+
+
+			/* we can also use the fr unit (fraction):; */
+			/* width: 80vw;
+			grid-template-columns: 1fr 2fr 1fr; */
+
+			/* sometimes we want to make more number of columns or rows, we can use the repeat function then */
+			/* grid-template-columns: repeat(4, 1fr); */
+			/* minmax() function holds up the minimum value kept for a cell if the max value cant be used */
+			/* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+
+			/* just like flex, we can also use the gap property to set rows and columns gap in a grid */
+			justify-items: center;
+			align-items: center;
+
+			/* align and justify content are used when the height of the grid is less than the height of the container */
+			/* they align the whole grid inside the container */
+			/* instead of align and justify content, we can use place-content on behalf of both of them */
+
+		}
+
+		.item {
+			border: 2px solid red;
+			height: 55px;
+			width: 55px;
+		}
+
+		.item-4 {
+			grid-row: 1/2;
+
+			/* we can also do : */
+
+			/* grid-row-start: 1;
+			grid-row-end: 2; */
+
+			grid-column: phla/t;
+		}
+
+		/*  this means that item of class item-4 will be at position of row 1 to 2 and column 1 to 2 as well*/
+		/* as there was an item of the grid already present there, item4 actually pushed that item to avoid overlapping but we can do overlapping by setting the same property for item 1  */
+
+		.item-1 {
+			grid-row: 1/2;
+			grid-column: 1/2;
+		}
+
+		/* now both are the same position overwriting each other */
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="item item-1">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item item-4">4</div>
+		<div class="item">5</div>
+	</div>
+</body>
+
+</html>

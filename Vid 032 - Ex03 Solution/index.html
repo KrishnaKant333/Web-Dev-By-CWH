@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS card design</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background-color: gray;
+			padding: 34px;
+		}
+
+		.card {
+			background-color: white;
+			width: 198px;
+			height: 344px;
+			border-radius: 7px;
+		}
+
+		.image {
+			padding: 5px;
+		}
+
+		.image img {
+			border-radius: 7px;
+		}
+
+		.content p {
+			font-size: 12px;
+			color: gray;
+		}
+
+		.content {
+			padding: 12px;
+		}
+
+		.capsules {
+			padding: 0 19px;
+		}
+
+		.capsules span {
+			font-size: 10px;
+			border: 1px solid gray;
+			border-radius: 20px;
+			padding: 1px 4px;
+			/* top bottom - 1px left right 4px */
+		}
+
+		.button{
+			text-align: center;
+		}
+		.button button{
+			padding: 4px 7px;
+			font-size: 12px;
+			border-radius: 20px;
+			background-color: lightblue;
+			color: blue;
+			margin-top: 3px;
+			border: none;
+			font-weight: bold;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="card">
+		<div class="image">
+			<img width="188" src="https://www.stockvault.net/data/2011/02/06/117454/thumb16.jpg" alt="Stock image">
+		</div>
+		<div class="capsules">
+			<span>Nature</span>
+			<span>Sunset</span>
+		</div>
+		<div class="content">
+			<h2>Harry</h2>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur
+				adipisicing elit. Minima voluptatem deleniti illum? Amet culpa expedita tenetur?</p>
+		</div>
+		<div class="button">
+			<button>Read more</button>
+		</div>
+	</div>
+</body>
+
+</html>

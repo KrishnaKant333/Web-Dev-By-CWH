@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>More on Selectors in CSS</title>
+	<style>
+		.box:first-child {
+			background-color: aqua;
+		}
+
+		/* .box:first-line{
+			color: brown;
+		} */
+		.boxes * {
+			border: 2px solid black;
+		}
+
+		/* we can group selectors separated by commas */
+		p, [data-color="primary"] {
+			color: yellowgreen;
+			padding-top: 30px;
+		}
+
+		/* .box:nth-child(odd) {
+			background-color: blue;
+		} */
+
+		.boxes::before{
+			content: "Harry is good";
+			color: violet;
+		}
+
+		.boxes::after{
+			content: "Sigma course is also good";
+			color: blue;
+		}
+
+		::selection{
+			color: aqua;
+			background-color: black;
+		}
+
+		.box::first-letter{
+			color: peru;
+			font-size: 40px;
+		}
+
+		/* before and after --> used to dynamically insert element in webpage */
+		/* known as pseudo elements not pseudo selectors */
+
+		input::placeholder{
+			color: blue;
+			font-size: 56px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="boxes">
+		<div class="box">Hey I am a box Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aut,
+			exercitationem voluptatibus deserunt voluptatem dolorum, incidunt quam voluptate pariatur error totam. Quo
+			sed doloremque, at ea ut velit, voluptatem possimus vel quasi, excepturi eius?</div>
+		<div data-color="primary" class="box">Hey I am a box</div>
+		<div class="box">Hey I am a box</div>
+	</div>
+	<input type="text" placeholder="Enter your name here">
+</body>
+
+</html>
