@@ -4,12 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>More on Selectors in CSS</title>
+	<title>More on Selectors</title>
 	<style>
 		.box:first-child {
 			background-color: aqua;
 		}
-
 		/* .box:first-line{
 			color: brown;
 		} */
@@ -29,13 +28,16 @@
 
 		.boxes::before{
 			content: "Harry is good";
-			color: violet;
+			color: pink;
 		}
 
 		.boxes::after{
 			content: "Sigma course is also good";
 			color: blue;
 		}
+
+		/* before and after --> used to dynamically insert element in webpage */
+		/* known as pseudo elements not pseudo selectors */
 
 		::selection{
 			color: aqua;
@@ -47,8 +49,6 @@
 			font-size: 40px;
 		}
 
-		/* before and after --> used to dynamically insert element in webpage */
-		/* known as pseudo elements not pseudo selectors */
 
 		input::placeholder{
 			color: blue;
