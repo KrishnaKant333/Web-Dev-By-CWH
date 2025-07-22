@@ -1,0 +1,14 @@
+.red{
+	color: red;
+}
+
+.bg-yellow{
+	background-color: yellow;
+}
+/* to target a class in CSS, use . */
+#firstdiv{
+	/* background-color: blanchedalmond; */
+}
+/* to target a id in CSS, use # */
+
+/* Note : id will take priority over class */

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Variables</title>
+	<style>
+		/* We can declare variables in CSS inside the root */
+		/* use the var() function to use the variables */
+		:root {
+			--color: blue;
+			--seccolor: lightblue;
+			--defpad : 12px;
+			--defop : 0.6;
+		}
+
+		/* variables declared inside the root are global */
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.nav {
+			background-color: var(--color);
+		}
+
+		ul {
+			opacity: var(--defop);
+			display: flex;
+		}
+
+		ul li {
+			list-style: none;
+			padding: var(--defpad );
+			border: 2px solid var(--seccolor);
+		}
+
+		ul li:first-child {
+			--color: pink;
+			/* even if the name is same, the global variable will be overwritten by the local one */
+
+			background-color: var(--color, blue);
+			/* if --color variable is not found, we should put a fallback color*/
+		}
+
+		/* variables declared inside the scope of any class are local */
+
+		.container {
+			background-color: var(--seccolor);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="nav">
+		<nav>
+			<ul>
+				<li>Home</li>
+				<li>About</li>
+				<li>Contact</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="container">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur impedit aut labore reprehenderit. Quia
+		impedit reiciendis error modi praesentium, delectus vero, libero at temporibus ut facilis, dolorem eligendi
+		expedita perspiciatis minima a sint neque! Deserunt reprehenderit ab, ratione iusto officia consequatur dolorum
+		sunt.
+	</div>
+</body>
+
+</html>

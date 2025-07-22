@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Sizing units</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			box-sizing: border-box;
+			border: 2px solid black;
+			/* width: 1024px; */
+			/* width: 100vw; */
+			/* vw stands for viewport width i.e. it will use that much percent of user's device which is given as the width */
+			/* 100vw means it will adapt to 100% of the user's viewing device */
+			width: 80vw;
+			height: 10vh;
+			margin: auto;
+
+			/* Margin auto means it will put equal margin from both the sides to make the block element center */
+			/* it can not be used for inline elements */
+
+			background-color: aquamarine;
+		}
+		.container{
+			box-sizing: border-box;
+			border: 2px solid black;
+			width: 80vw;
+			height: 80vh;
+			min-height: 80vh;
+			/* This means keep the minimum height as 80% of the device's height and it will adapt to the maximum height */
+			margin: 23px auto; /* 23px is top bottom margin and auto is left right*/
+			font-size: 9px;
+			background-color: aquamarine;
+		}
+		.container p{
+			font-size: 2em;
+			/* em is a relative value */
+			/* 2 em means that the font-size property of .container p class will inherit the font-size from .container class and will put 2x the size of the font-size there */
+			/* So in this case the value of the font-size will be 2*9 or 18px */
+			/* If no font-size is given in parent class then it will use the default font-size value which is 16px and apply 2*16 or 32px */
+
+			width: 50%;
+			/* % unit is used when parent class's dimension is set so that the class can have a certain percent of that dimension */
+		}
+
+		html{
+			font-size: 12px;
+		}
+
+		.container2{
+			font-size: 2rem;
+			/* rem means the relative value w.r.t. root which is html so 2*12 or 24px */
+		}
+
+		.mycont{
+			background-color: red;
+			color: yellow;
+			font-size: 22px;
+			width: 100vmin;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		This is a box
+	</div>
+
+	<div class="container">
+		<p>
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, voluptatibus. Sequi libero aspernatur dolorem, repudiandae qui ratione nam ducimus nisi enim, sapiente adipisci recusandae excepturi nihil quasi. Qui maxime nisi molestias impedit a maiores praesentium temporibus debitis architecto in, laboriosam natus pariatur adipisci error ad tempore autem illum minus voluptatum cupiditate expedita sit minima beatae nam.
+		</p>
+	</div>
+
+	<div class="container2">
+		<p>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem odit ea, eligendi deleniti vero esse nam molestiae? Laboriosam culpa id repellat minima iure?
+		</p>
+	</div>
+
+	<div class="mycont">
+		I am another container
+	</div>
+</body>
+</html>

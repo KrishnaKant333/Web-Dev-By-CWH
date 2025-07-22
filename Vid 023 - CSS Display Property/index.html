@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Display Property</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			border: 2px solid blue;
+			/* display: inline; */
+			display: inline-block;
+			/* we can explicitly set the display property of any element to be block or inline or anything else as well*/
+
+			margin: 34px;
+			padding: 20px;
+			/* margin padding will not be applied for the top of an inline element*/
+			width: 100px;
+			/* Width will not be applied for an inline element */
+
+			/* to get these effects, use inline-block as display value */
+		}
+		.box1{
+			/* display: none; */
+			/* display none will remove both the element and the space it was occupying */
+			visibility: hidden;
+		}
+		/* visibility: hidden will remove only the element but not the space it was occupying */
+	</style>
+</head>
+<body>
+	<div class="box box1">I am a box</div>
+	<div class="box">also a nice box</div>
+
+	<span>I am a good</span>
+	<span>boy</span>
+</body>
+</html>

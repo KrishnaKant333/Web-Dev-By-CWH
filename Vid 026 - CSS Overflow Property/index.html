@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Overflow</title>
+	<style>
+		.box {
+			width: 50vw;
+			height: 20vh;
+			border: 2px solid black;
+
+			/* overflow: scroll; */
+			overflow: auto;
+			/* auto will add a scroll bar if it overflows otherwise not */
+
+			/* white-space: nowrap; */
+			/* text will not be wrapped i.e. shown in a single line */
+
+			/* text-overflow: ellipsis; */
+			/* show dots to avoid using the whole thing */
+
+			/* we can individually set the x and y axes overflows' */
+			/* overflow-x: hidden;
+			overflow-y: scroll; */
+
+			/* instead of explicitly telling the x and y overflows */
+			/* overflow: hidden auto; */
+			/* x and then y axis */
+
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		I am a good boy and i love to write Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit voluptatem
+		quidem aliquid dolores repudiandae dolor a ipsam odit, vel deserunt itaque quae ab? Lorem ipsum dolor sit amet
+		consectetur adipisicing elit. Facere, deserunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+		consequatur sequi, voluptate dignissimos modi cumque quo possimus sunt vero consectetur!
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, minima tempora corrupti possimus ut est sint
+		dignissimos, delectus dolor, iste ea recusandae. Veritatis, quos tenetur porro odit id illo non.
+	</div>
+</body>
+
+</html>

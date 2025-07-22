@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Box Model</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box {
+			background-color: aqua;
+		}
+		.box1{
+			color: yellow;
+			padding: 10px;
+			margin: 25px;
+			border : 2px solid blue;
+			height: 200px; /* This height is the height of the contents only but the total height will be the one which is added afterwards which includes padding and border but not the margin*/
+
+			/* If we want to make it so the whole thing takes 200 px including padding and margin, then we should set box-sizing = border-box which means padding and margin will be added up to a total of 200 px */
+			box-sizing: border-box;
+
+		}
+		.box2{
+			color: red;
+			padding: 10px;
+			margin: 35px;
+			border : 2px solid black;
+			height: 200px;
+			box-sizing: border-box;
+		}
+
+		/* Margin Collapse */
+		/* If two margins collide with each other, then both of them will not be displayed but only one of them which is higher in value, in case of same margin values, margin will be displayed only once */
+		/* In this case out of 25px and 35px, the 35px will be displayed between the two box classes */
+
+
+	</style>
+</head>
+
+<body>
+	<div class="box box1">I am a box</div>
+	<div class="box box2">I am another box</div>
+</body>
+
+</html>

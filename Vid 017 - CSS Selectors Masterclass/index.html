@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Selectors</title>
+	<style>
+		/* Element selctor */
+		div {
+			/* background-color: red; */
+			/* This will make every div's bgcolor red not ideal*/
+		}
+
+		/* Class selctor */
+		.red {
+			/* for tags of class red*/
+			background-color: red;
+		}
+
+		/* Id selctor */
+		#green {
+			/* for tag having id green*/
+			background-color: green;
+		}
+
+		/* Descendent selector */
+		div p {
+			/* for any paragraph tag inside any layer of div need not be directly under div */
+			color: aquamarine;
+			background-color: aliceblue;
+		}
+
+		/* Child selctor */
+		div>p {
+			/* for all direct paragraph tags inside a div element*/
+			color: blue;
+			background-color: lightpink;
+		}
+
+		/* The selector described below the other will take priority in case of tie */
+
+		/* Universal selctor */
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		/* Pseudo Selector  */
+		a:visited{
+			color: yellow;
+		}
+		a:link{
+			color: green;
+		}
+		a:hover{
+			background-color: black;
+		}
+		a:active{
+			background-color: rebeccapurple;
+		}
+
+		p:first-child{ /* Property is applicable when p tag is first child of any tag or element*/
+			background-color: aqua;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div class="one">
+		<p>I am first </p>
+		<p>I am second</p>
+	</div>
+
+	<div class="red">
+		I am a div
+	</div>
+
+	<div id="green">
+		I am another div
+	</div>
+
+	<div>
+		<p>
+			hi im p inside div
+		</p>
+	</div>
+
+	<div>
+		<div>
+			<p>
+				hi im p under main under div
+			</p>
+		</div>
+	</div>
+	<a href="https://www.google.com">Go to google</a>
+</body>
+
+</html>

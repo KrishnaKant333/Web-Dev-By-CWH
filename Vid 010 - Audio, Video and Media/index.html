@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Video Audio and Media</title>
+</head>
+
+<body>
+	<div>
+		<video src="video.mp4" height="255" controls autoplay muted poster="Train.jpg"></video>
+	</div>
+
+	<div>
+		<audio src="audio.mp3" controls loop></audio>
+	</div>
+
+	<div>
+		<svg height="100" width="100">
+			<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+		</svg>
+
+		<!-- we can create a separate svg file and use it using img src attribute -->
+
+		<img src="circle.svg" alt="My svg circle">
+	</div>
+	<!-- Video, audio and svg are inline elements -->
+
+	<div>
+		<iframe src="https://www.codewithharry.com/notes" width="522" height="444"></iframe>
+		<!-- used to embed another website in yours-->
+	</div>
+	<!-- We can embed a youtube video using share option -->
+
+	<div>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/XZwBNDGuWGU?si=teVPbFgN8aNRsBEB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	</div>
+</body>
+
+</html>

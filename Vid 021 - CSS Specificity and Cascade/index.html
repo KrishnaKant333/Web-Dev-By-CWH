@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* The specificity of this selector is 1 */
+		/* h1{
+			color: aqua;
+		} */
+
+		/* The specificity of this selector is 10 */
+		.yellow {
+			color: yellow ;
+			/* color: yellow !important; */
+			/* The specificity of !important flag is 10000 */
+		}
+
+		/* The specificity of this selector is 1+10 = 11 (highest, so this one is applied ) */
+		h1.cred {
+			color: red;
+		}
+
+		/* The specificity of this selector is 10 */
+		.cpurple {
+			color: purple;
+		}
+
+		/* This is an example of attribute selector */
+		/* The specificity of this selector is 10 */
+		/* [data-x = a]{
+			color: maroon;
+		} */
+
+
+		/* 1. If selector is of the same type then the one at the last will be applied */
+
+		/* 2. For different types of selector, specificity is calculated : */
+		/* inline style > Id selector > class or attribute selector > element selector > universal selector */
+
+		/* here among element and class selectors, class selector is given preference, and among them the position of declaration of different class selectors is used to determine the property which will be applied*/
+
+
+		/* 3. Origin : if user has provided a stylesheet then it will overwrite the browser's default stylesheet (known as user agent stylesheet) */
+
+		/* 4. Important flag : if important is used in any of the above, then it will be given priority no matter what */
+
+
+		/* We avoid using inline styling and !important flag as they are very specific and hard to overwrite */
+
+
+	</style>
+</head>
+
+<body>
+	<div>
+		<h1 class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+		<h1 style="color: brown">If inline style is used then it will be hard to overwrite it</h1>
+		<div>
+			<h1> Specificity Calculation : </h1>
+			<p>
+				Assign :
+			<ol>
+				<li>universal selector : 0</li>
+				<li>element or pseudo selector : 1</li>
+				<li>class or attribute selector : 10</li>
+				<li>id selector : 100</li>
+				<li>inline style : 1000</li>
+			</ol>
+			</p>
+		</div>
+	</div>
+</body>
+
+</html>

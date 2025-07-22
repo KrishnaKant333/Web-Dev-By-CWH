@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Shadows and Outlines</title>
+	<style>
+		.box {
+			border: 2px solid black;
+			padding: 23px;
+			box-shadow: 5px 5px 15px 5px #d80f0f;
+			/* Format : h-offset, v-offset, blur, spread, color, inset */
+			/* inset makes the shadow inner */
+		}
+
+		.text-element {
+			text-shadow: 7px 5px 4px red;
+			outline: 2px solid black;
+			border: 2px solid green;
+			/* Outlines are drawn outside of any border */
+			outline-offset: 10px;
+			/* offset is the space between border and outline */
+			/* You can not change the width of an outline on a particular side, it has uniform width */
+			border-radius: 20px;
+			/* outline does not have a radius, it follows the border */
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		I am a box
+	</div>
+	<p class="text-element">
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum dolorum vero corporis? Veritatis voluptas, sit
+		veniam saepe numquam voluptates! Excepturi reiciendis minima ut.
+	</p>
+</body>
+
+</html>
