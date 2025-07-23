@@ -6,18 +6,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>My solution for Ex07</title>
 	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			box-sizing: border-box;
+		}
+
 		:root {
 			--hovercol: rgb(92, 92, 92);
 		}
 
+		header {
+			position: sticky;
+			top: 0px;
+			z-index: 1;
+		}
+
 		nav {
+			cursor: pointer;
+			background-color: white;
+			box-shadow: 1px 1px 15px 1px #888888;
+			padding: 20px 20px;
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
-		}
-
-		nav:hover {
-			cursor: pointer;
+			flex-wrap: wrap;
 		}
 
 		.left-menu img {
@@ -54,11 +68,6 @@
 			gap: 10px;
 		}
 
-		.right-menu .button {
-			border-width: 700;
-		}
-
-
 		.right-menu .button button {
 			background-color: white;
 			padding: 2vh 4vh;
@@ -72,6 +81,63 @@
 
 		.right-menu .lang:hover {
 			color: var(--hovercol);
+		}
+
+		main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+		.downloads {
+			display: grid;
+			width: 60vw;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 240px;
+			justify-items: center;
+			align-items: center;
+			margin-top: 10vh;
+			gap: 5vh 0;
+		}
+
+		.downloads .boxes {
+			height: 170px;
+			/* width: 350px; */
+			/* border: 1px solid black; */
+			text-align: center;
+			padding: 5vh;
+			line-height: 50px;
+		}
+
+		.downloads .boxes .btn button {
+			cursor: pointer;
+			background-color: rgb(37, 184, 37);
+			color: white;
+			font-weight: 700;
+			border: none;
+			padding: 1.5vh 3vh;
+			border-radius: 8px;
+			margin-top: 3px;
+		}
+
+		@media only screen and (max-width: 768px) {
+			nav {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.downloads {
+				width: 100vw;
+				grid-template-columns: 1fr;
+			}
+		}
+
+		@media only screen and (min-width: 1574px) {
+			.downloads {
+				width: 100vw;
+				grid-template-columns: 1fr 1fr 1fr;
+			}
 		}
 	</style>
 </head>
@@ -101,6 +167,62 @@
 			</div>
 		</nav>
 	</header>
+
+	<main>
+		<div class="downloads">
+			<div class="Eng boxes">
+				<h3>English</h3>
+				<h5>&nbsp;</h5>
+				<div class="btn"><Button>Download 64-Bit</Button></div>
+			</div>
+			<div class="Deu boxes">
+				<h3>Deutsch</h3>
+				<h5>German</h5>
+				<div class="btn"><Button>Download 64-Bit</Button></div>
+			</div>
+			<div class="Ita boxes">
+				<h3>Italiano</h3>
+				<h5>Italian</h5>
+				<div class="btn"><Button>Download 64-Bit</Button></div>
+			</div>
+			<div class="Esp boxes">
+				<h3>Español</h3>
+				<h5>Spanish</h5>
+				<div class="btn"><Button>Download 64-Bit</Button></div>
+			</div>
+			<div class="Fra boxes">
+				<h3>français</h3>
+				<h5>French</h5>
+				<div class="btn"><Button>Download 64-Bit</Button></div>
+			</div>
+			<div class="Por boxes">
+				<h3>Português brasileiro</h3>
+				<h5>Brazilian Portuguese</h5>
+				<div class="btn"><Button>Download 64-Bit</Button></div>
+			</div>
+			<div class="Jap boxes">
+				<h3>日本</h3>
+				<h5>Japanese</h5>
+				<div class="btn"><Button>Download 64-Bit</Button></div>
+			</div>
+			<div class="Kor boxes">
+				<h3>한국어</h3>
+				<h5>Korean</h5>
+				<div class="btn"><Button>Download 64-Bit</Button></div>
+			</div>
+			<div class="Chi boxes">
+				<h3>华语</h3>
+				<h5>Chinese</h5>
+				<div class="btn"><Button>Download 64-Bit</Button></div>
+			</div>
+			<div class="Tra boxes">
+				<h3>華語</h3>
+				<h5>Traditional Chinese</h5>
+				<div class="btn"><Button>Download 64-Bit</Button></div>
+			</div>
+		</div>
+	</main>
+
 </body>
 
 </html>
