@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Transforms</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box {
+			height: 50px;
+			width: 50px;
+			background-color: beige;
+			border: 2px solid black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.box1 {
+			transform: rotate(-40deg);
+
+			/* by default, the default rotate will rotate the element on the screen */
+
+			/* we can also use the unit turn  */
+			/* Note : 1 turn = 360deg */
+			/* transform: rotate(0.25turn); */
+			/* 0.25 turn = 0.25 * 360 = 90deg */
+
+			/* default transformation takes place about the centre of the element */
+			/* transform origin will take place about (0,0) */
+
+
+		}
+
+		/* we can use rotate in different dimensions */
+
+
+		.box2 {
+			transform: rotateX(40deg);
+		}
+
+		.box3 {
+			transform: rotateY(40deg);
+		}
+
+		.box4 {
+			transform: rotateZ(40deg);
+		}
+
+		.container {
+			display: flex;
+			justify-content: space-evenly;
+			height: 20vh;
+			width: 100vw;
+			border: 2px solid purple;
+		}
+
+
+		.box5 {
+			transform: scale(1.6);
+			/* similar are scaleX, Y and Z */
+		}
+
+		.box6 {
+			transform: skew(15deg);
+			/* skew X and Y are defined only but not Z  */
+		}
+
+		.box7 {
+			transform: translate(34px);
+			/* we can also use % in which it will be translated by the percentage of its width */
+			/* we can also use translate X Y and Z */
+		}
+
+		.box8{
+			transform: translateY(100%) rotate(90deg) skew(4deg);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="box">rotate()</div>
+
+		<div class="box box1">
+			baksa
+		</div>
+		<div class="box box2">
+			baksa
+		</div>
+		<div class="box box3">
+			baksa
+		</div>
+		<div class="box box4">
+			baksa
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="box">scale()</div>
+		<div class="box box5">
+			baksa
+		</div>
+		<div class="box">skew()</div>
+		<div class="box box6">
+			baksa
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="box">translate()</div>
+		<div class="box box7">baksa</div>
+	</div>
+
+	<div class="container">
+		<div class="box">multiple</div>
+		<div class="box box8">baksa</div>
+	</div>
+
+</body>
+
+</html>

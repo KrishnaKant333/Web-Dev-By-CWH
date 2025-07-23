@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My solution for Ex07</title>
+	<style>
+		:root {
+			--hovercol: rgb(92, 92, 92);
+		}
+
+		nav {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		nav:hover {
+			cursor: pointer;
+		}
+
+		.left-menu img {
+			height: 40px;
+		}
+
+		.middle-menu ul {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 30px;
+		}
+
+		.middle-menu ul li {
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 2px;
+		}
+
+		.middle-menu ul li:hover {
+			color: var(--hovercol);
+		}
+
+		.middle-menu ul li div {
+			transform: rotate(180deg);
+		}
+
+		.right-menu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.right-menu .button {
+			border-width: 700;
+		}
+
+
+		.right-menu .button button {
+			background-color: white;
+			padding: 2vh 4vh;
+			font-weight: 700;
+		}
+
+		.right-menu .button button:hover {
+			cursor: pointer;
+			color: var(--hovercol);
+		}
+
+		.right-menu .lang:hover {
+			color: var(--hovercol);
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="left-menu">
+				<img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Background-2.png" alt="UE Logo">
+			</div>
+			<div class="middle-menu">
+				<ul>
+					<li>Products <div>^</div>
+					</li>
+					<li>Pricing <div>^</div>
+					</li>
+					<li>Resources <div>^</div>
+					</li>
+					<li>Our Company <div>^</div>
+					</li>
+				</ul>
+			</div>
+			<div class="right-menu">
+				<div class="button"><button>BUY NOW</button></div>
+				<div class="lang"> 🌐 English</div>
+				<div class="search">🔎</div>
+			</div>
+		</nav>
+	</header>
+</body>
+
+</html>
