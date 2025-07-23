@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My solution for Ex06</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		:root {
+			--defpad: 20px;
+			--defpadtop: 40px;
+			--deftop: 0.5vh;
+		}
+
+		header {
+			position: sticky;
+			top: 0px;
+			z-index: 1;
+		}
+
+		/*nav {
+
+			 position: relative;
+			box-sizing: border-box;
+			height: 15vh;
+			width: 100%;
+			box-shadow: 1px 1px 15px 1px #888888;
+			background-color: white;
+
+		} */
+
+		ul {
+			position: relative;
+			box-sizing: border-box;
+			/* top: 5vh; */
+			height: 15vh;
+			width: 100vw;
+			/* border: 2px solid black; */
+			box-shadow: 1px 1px 15px 1px #888888;
+			background-color: white;
+			display: flex;
+			justify-content: center;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		.logo {
+			position: relative;
+			top: var(--deftop);
+			left: 1vh;
+			padding: var(--defpad);
+			padding-right: 12vw;
+		}
+
+		.menu {
+			box-sizing: border-box;
+			height: 10vh;
+			padding-right: 1vh;
+			/* padding: var(--defpad); */
+			padding-top: var(--defpadtop);
+		}
+
+		.menu img {
+			position: relative;
+			bottom: -1%;
+			height: 7px;
+		}
+
+
+		.quick-access {
+			padding: var(--defpad);
+			padding-top: var(--defpadtop);
+		}
+
+		.quick-access button {
+			position: relative;
+			padding: 10px 20px;
+			border: 2px solid black;
+			bottom: 30%;
+		}
+
+		.quick-access img {
+			position: relative;
+			bottom: 13%;
+			height: 25px;
+		}
+
+		li span {
+			position: relative;
+			bottom: 32%;
+		}
+
+		main {
+			text-align: center;
+		}
+
+		.main-head p {
+			padding-top: 10vh;
+			display: inline-block;
+			font-size: 55px;
+		}
+
+		.main-head img {
+			position: relative;
+			top: var(--deftop);
+			padding-left: 10px;
+		}
+
+		.sub-head {
+			word-spacing: 1px;
+			padding: 10vh 20vh 0 20vh;
+			font-size: 25px;
+			line-height: 6vh;
+		}
+
+		.button {
+			padding-top: 18px;
+		}
+
+		.button button {
+			padding: 18px;
+			border-radius: 5px;
+			color: white;
+			background-color: rgb(54, 187, 248);
+			border: none;
+			font-weight: 700;
+		}
+
+		.UE {
+			padding-top: 40px;
+			padding: 20px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+		.UE img {
+			padding-top: 40px;
+			padding: 20px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+		.UE .download {
+			padding-right: 10px;
+			position: relative;
+			font-size: 25px;
+			bottom: 30%;
+		}
+
+		.black-page {
+			background-color: rgba(0, 0, 0, 0.849);
+			color: white;
+			height: 110vh;
+			width: 100vw;
+		}
+
+		.black-page-same-line {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+
+		}
+
+		.join {
+			padding-top: 15vh;
+			width: 40vw;
+			height: 50vh;
+			text-align: center;
+		}
+
+		.black-page-same-line .join :first-child {
+			font-size: 25px;
+			padding-top: 20vh;
+		}
+
+		.black-page-same-line .join :nth-child(2) {
+			padding: 2vh;
+			/* width: 350px; */
+			font-size: 16px;
+		}
+
+		.subscribe {
+			background-color: white;
+			padding-top: 5vh;
+			color: rgb(49, 168, 207);
+			font-size: 22px;
+			text-align: center;
+			position: relative;
+			/* top: 6vh; */
+			margin: 10vh;
+			/* padding-left: 10vh; */
+			height: 35vh;
+			width: 33vw;
+			border: 2px solid white;
+			border-radius: 10px;
+		}
+
+		.text {
+			color: black;
+			font-size: 15px;
+			padding-top: 5vh;
+		}
+
+		.in input {
+			margin: 1vh;
+			height: 8vh;
+			width: 25vw;
+			opacity: 30%;
+		}
+
+		.btn {
+			padding: 1vh;
+		}
+
+		.btn button {
+			padding: 2vh 10vw;
+			border: none;
+			background-color: rgb(49, 168, 207);
+			color: white;
+			border-radius: 2px;
+		}
+
+		.lines {
+			padding-left: 3vw;
+			line-height: 7vh;
+		}
+
+		.p-head {
+			font-size: 25px;
+		}
+
+		.contents {
+			padding-right: 15vw;
+			font-size: 17px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav>
+
+			<ul>
+				<li class="logo"><img src="Logo.jpg" alt="Logo"></li>
+
+				<li class="menu">Products <img src="arrow.png" alt="Arrow"></li>
+				<li class="menu">Pricing <img src="arrow.png" alt="Arrow"></li>
+				<li class="menu">Resources <img src="arrow.png" alt="Arrow"></li>
+				<li class="menu">Our Company <img src="arrow.png" alt="Arrow"></li>
+
+
+				<li class="quick-access"><button>BUY NOW</button></li>
+				<li class="quick-access"><img src="web.png" alt="Web">
+					<span>English</span>
+				</li>
+				<li class="quick-access"><img src="Search.png" height="25px" alt="Search"></li>
+			</ul>
+
+		</nav>
+	</header>
+
+	<main>
+		<div class="main-head">
+			<p>Download <strong>UltraEdit</strong> for Windows</p>
+			<img src="temp.jpg" alt="Rating	">
+		</div>
+		<div class="sub-head">
+			Download and try UltraEdit before you buy it! This download includes the full Windows version of the text
+			editor.
+		</div>
+
+		<div class="button">
+			<button>DOWNLOAD MAC OR LINUX VERSION</button>
+		</div>
+
+		<div class="UE">
+			<img src="UE.jpg" alt="UE">
+			<div class="download">Download UltraEdit</div>
+			<div>v2025.0 (released 2025-07-07) | Hotfix information </div>
+		</div>
+
+	</main>
+	<footer>
+		<div class="black-page">
+			<div class="black-page-same-line">
+				<div class="join">
+					<p>Join the UltraEdit newsletter</p>
+					<p>Sign up for our newsletter and receive emails for the latest news, blogs, and special deals on
+						UltraEdit.</p>
+				</div>
+				<div class="subscribe">
+					Subscribe to our emails
+					<div class="text">Enter email address</div>
+					<div class="in">
+						<input type="text">
+					</div>
+					<div class="btn"><button>SIGN UP</button></div>
+				</div>
+			</div>
+			<div class="lines">
+				<p class="p-head">EXE or MSI?</p>
+				<p class="contents">The EXE builds of our products are the preferred download for most of our users,
+					running Windows 10
+					and later.
+
+					We make MSI builds available for bulk or silent deployments (command line, GPO, SCCM, etc.). Get the
+					UltraEdit MSI installer.</p>
+
+				<p class="p-head">Free trial period</p>
+				<p class="contents">This application comes with a free, fully functional 30 day trial period. After the
+					trial period
+					expires, you must purchase a license to continue using it.</p>
+			</div>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>

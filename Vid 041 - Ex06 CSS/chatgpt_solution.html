@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UltraEdit Clone with Flexbox</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #1c1c1c;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .left-section, .middle-section, .right-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .left-section {
+      gap: 10px;
+    }
+
+    .left-section img {
+      height: 40px;
+    }
+
+    .left-section span {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .middle-section {
+      gap: 20px;
+    }
+
+    .middle-section div {
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .middle-section div:hover {
+      text-decoration: underline;
+    }
+
+    .right-section {
+      gap: 15px;
+    }
+
+    .buy-btn {
+      padding: 6px 15px;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .buy-btn:hover {
+      background-color: #fff;
+      color: #1c1c1c;
+    }
+
+    .lang, .search {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="left-section">
+      <img src="logo.jpg" alt="UltraEdit Logo">
+      <span>UltraEdit by Idera Inc.</span>
+    </div>
+
+    <div class="middle-section">
+      <div>Products</div>
+      <div>Pricing</div>
+      <div>Resources</div>
+      <div>Our Company</div>
+    </div>
+
+    <div class="right-section">
+      <button class="buy-btn">Buy Now</button>
+      <div class="lang">🌐 English</div>
+      <div class="search">🔍</div>
+    </div>
+  </header>
+</body>
+</html>
