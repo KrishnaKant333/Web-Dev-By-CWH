@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Object-fit and Object-cover</title>
+	<style>
+		.flex{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container {
+			height: 520px;
+			width: 399px;
+			border: 2px solid black;
+			background-color: azure;
+		}
+
+		img {
+			height: 520px;
+			width: 399px;
+
+			/* object-fit: fill; */
+			/* by default it is set to fill */
+
+			object-fit: cover;
+			/* cover will cover the height and width of the img provided */
+			/* for this it will trim a portion of the image which is outside the given height and width */
+
+			/* object-fit: scale-down; */
+			/* object-fit: contain; */
+			/* contain will contain the whole img inside the specified height and width but for this it may leave some blank space to keep the aspect ratio */
+
+			/* we can specify if we want a particular portion of the img while using object-fit property using the obejct-position property to retain that part and trim others */
+			/* object-position: bottom right; */
+			/* we can also use px and % values for object-position */
+		}
+
+
+		.container2{
+			height: 520px;
+			width: 399px;
+			border: 2px solid black;
+			/* we can also use the bg image property to set the image as a background */
+			background-image: url("https://t0.gstatic.com/images?q=tbn:ANd9GcSeWMVjhSK98fjZEJ51FgMgHRzAfNGMZXpbKE--uzvTf4-2fpu20TpF7z4A4gTNsy6kiSoOdy1U");
+			background-position:center center;
+			/* set what part of image will be shown as background */
+
+			/* we can set an image as background to prevent others from downloading until source code is inspected */
+
+
+			/* by default the background image will repeat itself to cover the background, we can set this off by : */
+			background-repeat: no-repeat;
+
+			/* we can also set it to repeat in only x when width is less or in y when height is less */
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="flex">
+		<div class="container">
+			<img src="https://t0.gstatic.com/images?q=tbn:ANd9GcSeWMVjhSK98fjZEJ51FgMgHRzAfNGMZXpbKE--uzvTf4-2fpu20TpF7z4A4gTNsy6kiSoOdy1U"
+				alt="">
+		</div>
+
+		<div class="container2">
+
+		</div>
+	</div>
+
+</body>
+
+</html>

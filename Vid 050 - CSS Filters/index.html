@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Filters in CSS</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		.container{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		img{
+			height: 400px;
+			width: 400px;
+			border: 2px solid black;
+			object-fit: contain;
+		}
+		.morpankh{
+			filter: blur(4px) opacity(70%);
+		}
+		.srk{
+			filter: brightness(122%) contrast(2.5);
+		}
+		.ak{
+			/* filter: grayscale(70%); */
+			filter: sepia(60%);
+		}
+	</style>
+</head>
+<body>
+	<div class="container"><img class="morpankh" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?_gl=1*1c713qz*_ga*NzAyMzA2NzQyLjE3NTM0NDQzMDE.*_ga_8JE65Q40S6*czE3NTM0NDQzMDEkbzEkZzEkdDE3NTM0NDQzNjUkajU5JGwwJGgw" alt="">
+
+	<img class="srk" src="https://imgeng.jagran.com/images/2025/07/19/article/image/Shah-Rukh-Khan-(14)-1752914767672_v.webp" alt="">
+
+	<img src="https://m.media-amazon.com/images/M/MV5BODI4NDY1NzkyM15BMl5BanBnXkFtZTgwNzM3MDM0OTE@._V1_QL75_UY414_CR25,0,280,414_.jpg" alt="" class="ak">
+
+	</div>
+
+
+
+</body>
+</html>

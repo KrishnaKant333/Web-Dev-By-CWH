@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My solution for Ex08</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			--Yinit: -100px;
+			--Yfin: 0px;
+		}
+
+		.container {
+			width: 80vw;
+			height: 70vh;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-end;
+			background-color: blue;
+
+		}
+
+		.circle {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			border-radius: 70px;
+
+			/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+			animation: bounce 3s linear 1 forwards;
+		}
+
+		@keyframes bounce {
+			0% {
+				transform: translateX(0) translateY(var(--Yinit));
+			}
+
+			20% {
+				transform: translateX(100px) translateY(var(--Yfin));
+			}
+
+			40% {
+				transform: translateX(200px) translateY(var(--Yinit));
+			}
+
+			60% {
+				transform: translateX(300px) translateY(var(--Yfin));
+			}
+
+			80% {
+				transform: translateX(400px) translateY(var(--Yinit));
+			}
+
+			100% {
+				transform: translateX(500px) translateY(var(--Yfin));
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="circle"></div>
+	</div>
+</body>
+
+</html>
