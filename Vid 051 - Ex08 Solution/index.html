@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercise 08 soltuion</title>
+	<style>
+		.container {
+			position: relative;
+			width: 80vw;
+			height: 70vh;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-end;
+			background-color: blue;
+
+		}
+
+		.circle {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 90px;
+			height: 90px;
+			background-color: red;
+			border-radius: 70px;
+			animation: horizontal 3s linear infinite, vertical 1s ease-out infinite alternate;
+		}
+
+		@keyframes horizontal {
+			from {
+				left: 0;
+			}
+
+			to {
+				left: 100%;
+			}
+		}
+
+		@keyframes vertical {
+			from {
+				bottom: 0;
+			}
+
+			to {
+				bottom: 100%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="circle"></div>
+	</div>
+</body>
+
+</html>
